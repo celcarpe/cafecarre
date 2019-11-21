@@ -1,0 +1,172 @@
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+ul {
+  list-style: none;
+}
+
+section {
+  height: 100vh;
+  min-height: 100vh;
+  width: 100%;
+}
+
+/*--- navigation bar ---*/
+.navbar {
+  background: #053b06;
+}
+
+.nav-link,
+.navbar-brand {
+  color: #fff;
+  cursor: pointer;
+}
+
+.nav-link {
+  margin-right: 1em;
+}
+
+.nav-link:hover {
+  color: #139a43;
+}
+
+.navbar-collapse {
+  justify-content: flex-end;
+}
+
+#home {
+  z-index: 0;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#home::before {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-image: url(https://d37219swed47g7.cloudfront.net/media/images/guides/coffee-shops-chicago/banners/1529940645.37.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  filter: blur(2px);
+}
+#home .background {
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 300px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+}
+#home h1 {
+  color: white;
+  text-shadow: -6px 4px 2px rgba(7, 16, 19, 0.1);
+  font-size: 6rem;
+}
+
+#carte {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#carte #carousel {
+  height: 100%;
+  width: 100%;
+}
+#carte #carousel .carousel-item {
+  width: 100%;
+  height: 100vh;
+}
+#carte #carousel .carousel-item .carousel-caption {
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 3px;
+}
+#carte #carousel .carousel-item img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+#acces {
+  background-color: #053b06;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+#acces #map123 {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+#acces .contact_info {
+  position: absolute;
+  display: flex;
+  height: 400px;
+  width: 300px;
+  margin-bottom: 20px;
+  margin-left: 50px;
+  flex-direction: column-reverse;
+}
+#acces .contact_info .btn {
+  width: 100%;
+  border: none;
+  border-radius: 2px;
+  background-color: #053b06;
+}
+#acces .contact_info .btn:hover {
+  border: none;
+  background-color: #139a43;
+}
+#acces .contact_info .btn:focus {
+  box-shadow: none;
+}
+#acces .contact_info #info {
+  width: 100%;
+}
+
+.footer {
+  height: 50vh;
+  min-height: 50vh;
+  width: 100%;
+  background-color: #071013;
+}
+.footer .content {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.footer .content h3 {
+  font-size: 1.3rem;
+}
+.footer .content #copyright {
+  margin: 0;
+  text-align: center;
+  color: white;
+}
+.footer .content #copyright a:hover {
+  text-decoration: none;
+}
+
+/* MEDIA QUERIES */
+@media only screen and (max-width: 400px) {
+  #acces {
+    justify-content: center;
+  }
+  #acces div.contact_info {
+    width: 200px;
+    margin-left: 0;
+  }
+}
